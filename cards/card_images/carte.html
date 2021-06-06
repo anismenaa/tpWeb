@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>carte</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<style>
+	img {
+	  display: block;
+	  margin-bottom: 5px;
+	}
+	#c1,#c3, #s2 {
+	  float: left;
+	  width: 200px;
+	  height: 90%;
+	  margin: 10px;
+	  padding: 10px;
+	  border: 1px solid black;
+	}
+	div.inline { 
+		float:right;
+	    margin:5px;
+	    padding: 5px; }
+	
+	#point{
+		border :none;
+		font-size:30px;
+	}
+	strong{
+       font-size:30px;
+	}
+</style>
+
+	<div>
+	<form>
+	   <strong>Points : <input type="text" id="point" value="0"/></strong>
+	</form>
+	</div>
+
+
+	<div id="c1" ondrop="drop(event)" ondragover="allowDrop(event)">c1</div>
+	<div id="c3" ondrop="drop(event)" ondragover="allowDrop(event)">c3</div>
+	<div id="s2" ondrop="drop(event)" ondragover="allowDrop(event)">s2</div>
+
+
+    
+   <div class="inline">
+    <img id="carte_c3" src="3c.png" draggable="true" ondragstart="drag(event)"  width="80" height="88">
+    <img id="carte_s2" src="2s.png" draggable="true" ondragstart="drag(event)"  width="80" height="88">
+    <img id="carte_c1" src="1c.png" draggable="true" ondragstart="drag(event)"  width="80" height="88">
+   </div>
+   
+    
+    
+
+
+
+
+
+   
+
+   <script type="text/javascript">
+
+   	function drag(ev)  {
+   		ev.dataTransfer.setData("text",ev.target.id);
+   	}
+   		function allowDrop(ev) {
+	    ev.preventDefault();
+	}
+	    function drop(ev) {
+        ev.preventDefault();
+        var data = ev.dataTransfer.getData("text");	
+        ev.target.appendChild(document.getElementById(data));
+
+
+        var p=parseInt(document.getElementById('point').value, 10);
+        var c1 = document.getElementById('c1');
+        var c3 = document.getElementById('c3');
+        var s2 = document.getElementById('s2');
+        if (c1==ev.target && data =="carte_c1") {p++;}
+        else if (s2==ev.target && data=="carte_s2") {p++;}
+        else if (c3==ev.target && data=="carte_c3") {p++;}
+        else {p--;}
+        document.getElementById('point').value = p;
+    }
+
+
+   </script>
+</body>
+</html>

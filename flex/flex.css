@@ -1,0 +1,33 @@
+body{
+	background-color: red;
+	display: flex;
+	justify-content: center;
+	margin: 0;
+	padding:0;
+}
+.border{
+	justify-content: center;
+	background-color: yellow;
+	flex-basis: 120px;
+	
+}
+.content{
+	background-color: blue;
+	
+	padding:5px;
+	flex-basis: 80%;
+	justify-content: center;
+	flex-direction: column;
+	
+}
+.info1 h1,.info1 p,.p,.border{
+	display: flex;
+	justify-content: center;
+}
+.p{
+color: white;
+}
+.content div{
+	background-color: pink ;
+	margin: 10px;
+}

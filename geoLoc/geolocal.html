@@ -1,0 +1,45 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>geolocalisation</title>
+    <style>
+    
+    </style>
+</head>
+<body>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52160.64196454079!2d-0.6664104115498954!3d35.20546954125051!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd7f0030b5f78f73%3A0x24600b519acfdc29!2sSidi%20Bel%20Abb%C3%A8s!5e0!3m2!1sen!2sdz!4v1617615269534!5m2!1sen!2sdz" id="map" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        <div id="demo"></div>
+        <div id="infoposition"></div>
+        <script>
+                var x = document.getElementById("demo");
+                function getLocation() {
+                  if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(showPosition);
+                  } else {
+                    x.innerHTML = "la geolocalisation n'est pas pris en charge par ce navigateur.";
+                  }
+                }
+                
+                function showPosition(position) {
+                  x.innerHTML = "Latitude: " + position.coords.latitude +
+                  "<br>Longitude: " + position.coords.longitude;
+                }
+        </script> 
+        <script>
+            function maPosition(position) {
+              var info_position = "affichage de la position :\n";
+              infopos += "Latitude : "+position.coords.latitude +"\n";
+              infopos += "Longitude: "+position.coords.longitude+"\n";
+              infopos += "Altitude : "+position.coords.altitude +"\n";
+              document.getElementById("infoposition").innerHTML = infopos;
+              }
+
+              if(navigator.geolocation) {
+              // si l'api est disponible 
+              navigator.geolocation.getCurrentPosition(maPosition);
+            }
+        </script>
+</body>
+</html>

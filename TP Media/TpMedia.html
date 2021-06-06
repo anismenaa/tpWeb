@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  </head>
+  <style media="screen">
+  .cards {
+     display: flex; 
+     flex-wrap: nowrap;
+     margin-left: 60px;
+  }
+  .card {
+    width: 15rem;
+    margin: 10px;
+  }
+  @media only screen and (min-width: 1100px) {
+  .main_image img{
+    margin:10px;
+    margin-top:80px; 
+    height:600px;
+    width:1200px;
+  }
+
+  .Map img {
+    margin:10px;
+    height:500px;
+    width:600px;
+  }
+  .btn1{
+     bottom: 0%;transform: translateX(420%);
+  }
+}
+  /*Tablette Screen*/
+  @media only screen and (max-width: 1100px) {
+    body {
+      width: 1000px;
+    }
+    .navbar-brand  {
+      margin-left: auto;margin-right: auto;
+        align-items: center!important;
+        justify-content: center ;
+    }
+    .navbar-toggler{
+      display: none!important;
+    }
+    .navbar-collapse.collapse {
+      display: block!important;
+    }
+
+    .navbar-nav>li ,.navbar-nav {
+      flex-direction: row;
+      margin-right: 10px;
+      align-items: center!important;
+       justify-content: center ;
+    }
+    .main_image img{
+      margin:0px;margin-top:130px; height:500px;width:1050px;
+    }
+    .cards {
+        width: 1000px;
+       display: inline-block; flex-wrap: wrap ;margin-left: 60px;margin-right: 10px;
+    }
+    .card{
+      display: inline-block;
+      margin: 50px;
+    }
+    .c1{
+            margin: 10px;
+      flex-direction: column;
+    }
+    .btn1{
+      width:300px;
+      transform: translateX(0%)
+    }
+    .Map img {
+      margin:10px;height:680px;width:500px;
+    }
+    .last{
+      flex-direction: row;
+    }
+  }
+
+  /*Mobile Screen*/
+  @media only screen and (max-width: 420px) {
+    body {
+      width: 500px;
+    }
+    .navbar-brand  {
+        align-items: center!important;
+        justify-content: center ;
+    }
+    .navbar-toggler{
+      margin-left: 80px;
+      display: block!important;
+    }
+    .navbar-collapse.collapse {
+      display: none!important;
+    }
+    .navbar-nav>li ,.navbar-nav {
+      flex-direction: row;
+      margin-right: 10px;
+      align-items: center!important;
+      justify-content: center ;
+    }
+    .main_image img{
+      margin:0px;padding: 0px;margin-top:76px; height:500px;width:1000px;
+    }
+    .main_text{
+      width: 1000px;
+    }
+    .cards {
+            margin-left: auto;margin-right: auto;
+       display: flex; flex-direction: column;margin-left: 80px;margin-right: 80px;
+    }
+    .card{
+      margin: 40px;
+      margin-left: 200px;
+      margin-right: 200px;
+      flex-direction: column;
+    }
+    .c1{
+
+      flex-direction: column;
+    }
+    .btn1{
+      width:900px;
+      transform: translateX(0%)
+    }
+    .Map img {
+
+      margin:10px;
+      margin-left: auto;margin-right: auto;
+      height:680px;width:950px;
+    }
+    .last{
+      flex-direction: column;
+    }
+
+  }
+
+  </style>
+  <body>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+      <div class="navbar-brand" >
+        <a class="" href="#">
+         
+        </a>
+      </div>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">about Us </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact Us</a>
+        </li>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </ul>
+    </div>
+  </nav>
+     <center>
+    <div class="main_image">
+      <img src="image-ramdan.jpg" alt="" >
+    </div>
+    <div class="main_text" style="margin:10px">
+      <h1>Les oiseaux </h1>
+      <p>   un oiseau est le terme communément employé pour parler du World Wide Web, ou WWW, traduit en français par la toile d'araignée mondiale. Il fait référence au système hypertexte fonctionnant sur le réseau informatique mondial Internet. Par abus de langage, le Web désigne de façon plus large tout ce qui se rapproche à cet univers internet. On ne fait plus toujours aujourd'hui la distinction technique entre ce que définit le Web et ce que définit Internet.</p>
+    </div>
+   <center>
+    <div class="row cards" >
+ 
+      <div class="card" style="">
+        <img class="card-img-top" src="bird.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Chaque jour, Guillaume Terrien décortique pour vous une règle orthographique de la langue française..</p>
+          <a href="#" class="btn btn-warning">Price_DZ</a>
+        </div>
+      </div>
+      <div class="card" style="">
+        <img class="card-img-top" src="bird.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">birds </h5>
+          <p class="card-text">Chaque jour, Guillaume Terrien décortique pour vous une règle orthographique de la langue française.</p>
+          <a href="#" class="btn btn-warning">Price_DZ</a>
+        </div>
+      </div>
+      <div class="card" style="">
+        <img class="card-img-top" src="bird.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">birds </h5>
+          <p class="card-text">Chaque jour, Guillaume Terrien décortique pour vous une règle orthographique de la langue française.</p>
+          <a href="#" class="btn btn-warning">Price_DZ </a>
+        </div>
+      </div>
+      <div class="card" style="">
+        <img class="card-img-top" src="bird.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">birds  </h5>
+          <p class="card-text">Chaque jour, Guillaume Terrien décortique pour vous une règle orthographique de la langue française.</p>
+          <a href="#" class="btn btn-warning">Price_DZ</a>
+        </div>
+      </div>
+         
+    </div>
+ </center>
+ <center>
+    <div class="row last">
+      <div class="Map" style="margin:20px">
+        <h2>Map </h2>
+        <img src="map.jpg" alt="" style="">
+      </div>
+      <div class="form" style="margin:20px">
+                  <h2>Information </h2>
+        <form>
+
+          <div class="row c1" >
+            <div class="form-group" style="margin-right: 15px;">
+              <label for="exampleInputEmail1"> </label>
+              <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter Nom">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1"></label>
+              <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Prenom">
+            </div>
+          </div>
+          <div class="row c1">
+            <div class="form-group" style="margin-right: 15px;">
+              <label for="exampleInputEmail1"></label>
+              <input type="text" class="form-control" id="exampleInputEmail1"  placeholder="Enter Nom">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1"></label>
+              <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Prenom">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1"></label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1"></label>
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+          </div>
+          <div class="form-group">
+            <label for="exampleFormControlTextarea1"></label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+          </div>
+
+
+          <button type="submit"  class="btn btn-success" >Submit</button>
+        </form>
+      </div></center>
+    </div>
+
+  </center>
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>

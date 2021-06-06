@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #menu{
+            display: none;
+        }
+
+        li{
+            display: inline-block;
+            
+        }
+        ul,input{
+            float: right;
+        }
+
+        nav{
+            background-color: cadetblue;
+            height: 100px;
+        }
+
+        #logo{
+            width:100px;
+            height: 100px;
+            
+        }
+        img{
+            width: 100%;
+            height: 300px;
+        }
+        
+        #pic{
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            margin-left: 200px;
+        }
+        
+        .divv>img{
+            width: 700px;
+            height:800px;
+        }
+        .form{
+            position: absolute;
+            top: 720px;
+            margin-left: 100px;
+        }
+        #inline1,#inline2 {
+            display: inline-block;
+           margin-right: 130px;
+           margin-bottom: 10px;
+           width: 200px;         
+        }
+        #email,#photo{
+            display: block;
+            margin-bottom: 10px;
+            margin-right: 80px;
+           width: 100%;
+        }
+        #msg{
+            height: 100px;
+            width: 100%;
+            position: relative;
+            right: 80px;
+        }
+        #envoyer{
+        position: relative;
+            right: 85px;
+        }
+       
+        .divv,.form{
+            display: inline-block;
+
+        }
+
+/***********************************************************TABLETTE**********************************************************/
+@media screen and (max-width: 800px) {
+        #menu{
+            display: none;
+        }
+        li{
+            display: inline-block;
+           position: relative;
+           top: 60px;
+           right: 250px;
+
+            
+        }
+        
+        body{
+            background-color: pink;
+        }
+
+        ul>input{
+                position: relative;
+                top: 55px;
+                right:200px;
+        }
+
+        nav{
+            background-color: cadetblue;
+            height: 100px;
+        }
+
+        #logo{
+            width:70px;
+            height:70px;
+            position: relative;
+            left: 290px;
+            
+        }
+        img{
+            width: 100%;
+            height: 300px;
+        }
+        
+        #pic{
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            margin-left: 200px;
+        }
+        
+        .divv>img{
+            width: 350px;
+            height:500px;
+        }
+        .form{
+            position: absolute;
+            top: 900px;
+            margin-left: 100px;
+        }
+        #inline1,#inline2 {
+            display: inline-block;
+           margin-right: 130px;
+           margin-bottom: 10px;
+           width: 200px;         
+        }
+        #email,#photo{
+            display: block;
+            margin-bottom: 10px;
+            margin-right: 80px;
+           width: 100%;
+        }
+        #msg{
+            height: 100px;
+            width: 100%;
+        }
+        #envoyer{
+            position: relative;
+            right: 85px;
+            width: 100%;
+        }
+       
+        .divv,.form{
+            display: inline-block;
+
+        }
+}
+
+
+
+/***********************************************************TEL**********************************************************/
+@media screen and (max-width:600px) {
+        li{
+            display: none;
+           position: relative;
+           top: 60px;
+           right: 250px;
+
+            
+        }
+
+        body{
+            background-color: darkgray;
+        }
+        ul>input{
+                position: relative;
+                top: 55px;
+                right:180px;
+                
+        }
+
+        nav{
+            background-color: cadetblue;
+            height: 100px;
+        }
+
+        #menu{
+            display: inline;
+            color:white;
+        }
+        #logo{
+            width:70px;
+            height:70px;
+            position: relative;
+            left: 180px;
+            
+        }
+        img{
+            width: 100%;
+            height: 300px;
+        }
+        
+        #pic{
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            margin-left: 200px;
+        }
+        
+        .divv>img{
+            width: 100%;
+            height:500px;
+        }
+        .form{
+            position: absolute;
+            top: 1700px;
+            margin-left: 100px;
+        }
+        #inline1,#inline2 {
+           display: inline-block;
+           margin-right: 80px;
+           margin-bottom: 10px;
+           width: 100%;         
+        }
+        #email,#photo{
+            display: block;
+            margin-bottom: 10px;
+            margin-right: 80px;
+           width: 100%;
+        }
+        #msg{
+            height: 100px;
+            width: 100%;
+        }
+        #envoyer{
+            position: relative;
+            right: 85px;
+            width: 100%;
+        }
+       
+        .divv,.form{
+            display: block;
+
+        }
+}
+
+
+
+    </style>
+
+
+<nav>
+    <a href="#" id="menu">Menu</a>
+
+    <img id="logo" src="logo.png">
+
+    <ul>
+
+        <input type="search" placeholder="search...">
+        <li>
+        Accueil |
+        </li>
+        <li>
+        Titre |
+        </li>
+        <li>
+            Contact
+        </li>
+    </ul>
+
+</nav>
+</head>
+<body>
+    <hr size="5px" color="black">
+
+    <div id="image1">
+        <img src="Image.jpg">
+    </div>
+
+    <div>
+        <h1>Tire</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem hic magnam sequi in consectetur amet, eaque debitis beatae itaque placeat? Nobis voluptatem sit animi ipsa provident asperiores nisi aut dicta?
+            agnam sequi in consectetur amet, eaque debitis beatae itaque placeat? Nobis voluptatem sit animi ipsa provident asperiores nisi aut dicta?agnam sequi in consectetur amet, eaque debitis beatae itaque placeat? Nobis voluptatem sit animi ipsa provident asperiores nisi aut dicta?agnam sequi in consectetur amet, eaque debitis beatae itaque placeat? Nobis voluptatem sit animi ipsa provident asperiores nisi aut dicta?agnam sequi in consectetur amet, eaque debitis beatae itaque placeat? Nobis voluptatem sit animi ipsa provident asperiores nisi aut dicta?
+        </p>
+    </div>
+    <div class="les4">
+       <img id="pic" src="Image.jpg"> 
+        <img id="pic" src="Image.jpg">
+        <img id="pic" src="Image.jpg">
+        <img id="pic" src="Image.jpg">
+    </div> 
+
+        <div class="divv">
+            <h2>Titre2</h2>
+
+            <img src="Image.png">
+
+        </div>
+
+        
+        <div class="form">
+            <h2>Titre2</h2>
+
+        <form>
+            <input id="inline1" type="text" placeholder="Nom">
+            <input id="inline1" type="text" placeholder="Prenom">
+            <br>
+            <input id="inline2" type="text" placeholder="Date N">
+            <input id="inline2" type="text" placeholder="Ville">
+
+            <input id="email" type="email" placeholder="Adr Email">
+            <br/>
+            <input id="photo" type="text" placeholder="Photo">
+
+            <br/>
+            <input id="msg" type="text">
+            <input id="envoyer" type="submit" value="Envoyer">
+
+        </form>
+    </div>
+
+    
+</body>
+</html>

@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>storage exercice</title>
+</head>
+<body>
+    <input type="text" name="commentaire" id="commentaire">
+    <button type="button" id="btn">commenter</button>
+    <div id="affichage"></div>
+    
+    <script>
+        var i = localStorage.length;
+        document.getElementById('btn').addEventListener('click',function(){
+            var input = document.getElementById('commentaire');
+            localStorage.setItem(i,input.value);
+
+            var p = document.createElement('p');
+            var key= localStorage.key(i);
+            var value=localStorage.getItem(key);
+            var chaine = key + ' . ' + value;
+            p.innerHTML=chaine;
+            document.getElementById('affichage').appendChild(p);
+
+            i++;
+            location.reload();
+        });
+
+
+    </script>
+</body>
+</html>

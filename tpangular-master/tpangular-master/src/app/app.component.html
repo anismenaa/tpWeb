@@ -1,0 +1,45 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">TP-Angular</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" routerLinkActive=”active” aria-current="page" routerLink="/accueil">Accueil</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/cours">Cours</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/contact">contact</a>
+        </li>
+      </ul>
+    </div>
+    <form class="d-flex" #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
+      <!-- ^([A-Za-z]+ )+[A-Za-z]+$|^[A-Za-z]+$ --> 
+      <input name="student" [(ngModel)]="student.name" #name="ngModel" required minlength="5" pattern="^([a-zA-Z0-9]+\s{1}[a-zA-Z0-9]+$)" class="form-control me-2" type="text" placeholder="Name" aria-label="Name">
+      <button [disabled]="!loginForm.form.valid" class="btn btn-outline-success" type="submit">Login</button>
+    </form>
+    
+  </div>
+</nav>
+<router-outlet></router-outlet>
+
+<div *ngIf="name.invalid && (name.dirty || name.touched)"
+    class="alert">
+
+  <div *ngIf="name.errors.required" class="alert alert-danger w-50">
+    Name is required.
+  </div>
+  <div *ngIf="name.errors.minlength" class="alert alert-danger w-50">
+    Name must be at least 5 characters long.
+  </div>
+  <div *ngIf="name.errors.pattern" class="alert alert-danger w-50">
+    Name is not following the pattern add a space between your first and last name
+  </div>
+
+
+
+</div>
